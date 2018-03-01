@@ -1,0 +1,9 @@
+{application,testtask,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{testtask_app,[]}},
+              {env,[]},
+              {modules,[authorize,chpass,etsmgr,get_users,registration,
+                        testtask_app,testtask_sup]}]}.
