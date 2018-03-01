@@ -38,7 +38,7 @@ echo(<<"GET">>, Token, Req) ->
 %%    UsrList = [Usr || ],
 
 
-     cowboy_req:reply(403, #{<<"content-type">> => <<"text/plain; charset=utf-8">>}, jsx:encode([{<<"result">>, <<"success">>}, {<<"users">>, [Usr || [{Usr, Pass}] <- ets:match(users, '$1')]}]), Req)
+     cowboy_req:reply(403, #{<<"content-type">> => <<"application/json; charset=utf-8">>}, jsx:encode([{<<"result">>, <<"success">>}, {<<"users">>, [Usr || [{Usr, Pass}] <- ets:match(users, '$1')]}]), Req)
 
   end;
 
